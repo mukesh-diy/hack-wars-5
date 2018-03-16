@@ -20,11 +20,17 @@ restService.get("/home", function(req, res) {
 });
 
 restService.post("/assist", function(req, res) {
-  var req_txt = req.body;
+  var req_result = req.result;
+  var req_action = req_result.action;
+  if(req_action=='select.seat') {
+    if(req_result.preference=='Window') {
+      res_txt = "Lucky you! Found a window seat. Seat No is A22W";
+    }
+  }
   return res.json({
     res_txt: req_txt,
     displayText: req_txt,
-    source: "Hello There!"
+    source: req_txt
   });
 });
 
