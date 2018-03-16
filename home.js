@@ -20,7 +20,9 @@ restService.get("/home", function(req, res) {
 });
 
 restService.post("/assist", function(req, res) {
-  return req;
+  return res.json({
+    res_txt: req
+  });
   /*var req_result = req.body.result;
   var req_action = req_result.action;
   if(req_action=="select.seat") {
