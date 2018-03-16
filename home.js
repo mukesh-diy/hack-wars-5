@@ -21,7 +21,7 @@ restService.get("/home", function(req, res) {
 
 restService.post("/assist", function(req, res) {
   return res.json({
-    res_txt: req
+    res_txt: req.body
   });
   /*var req_result = req.body.result;
   var req_action = req_result.action;
