@@ -23,10 +23,12 @@ restService.post("/assist", function(req, res) {
   //var jsonBody = JSON.parse(req.body);
   var req_result = req.body.result;
   var req_action = req_result.action;
-  var output_txt;
+  var output_txt = "Did not get that. Seems something went wrong.";
   if(req_action=="select.seat") {
     if(req_result.parameters.preference=="window") {
       output_txt = "Lucky you! Found a window seat. Seat No is A22W";
+    } else {
+      output_txt = "Sorry, there was no window seat available. Booked another seat for you. Seat No. is Z12"
     }
   }
   
