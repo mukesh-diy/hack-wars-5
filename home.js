@@ -31,7 +31,7 @@ restService.post("/assist", function(req, res) {
   }
   
   return res.json({
-    res_txt: output_txt,
+    speech: output_txt,
     displayText: output_txt,
     source: output_txt
   });
