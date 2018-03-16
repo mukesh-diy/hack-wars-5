@@ -31,9 +31,10 @@ restService.post("/assist", function(req, res) {
   }
   
   return res.json({
+    fulfillmentText: output_txt,
     speech: output_txt,
     displayText: output_txt,
-    source: output_txt
+    source: "Hack-Wars"
   });
 });
 
