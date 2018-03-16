@@ -20,22 +20,21 @@ restService.get("/home", function(req, res) {
 });
 
 restService.post("/assist", function(req, res) {
-  return res.json({
-    res_txt: req.body
-  });
-  /*var req_result = req.body.result;
+  //var jsonBody = JSON.parse(req.body);
+  var req_result = req.body.result;
   var req_action = req_result.action;
+  var output_txt;
   if(req_action=="select.seat") {
     if(req_result.parameters.preference=="window") {
-      res_txt = "Lucky you! Found a window seat. Seat No is A22W";
+      output_txt = "Lucky you! Found a window seat. Seat No is A22W";
     }
   }
   
   return res.json({
-    res_txt: req_txt,
-    displayText: req_txt,
-    source: req_txt
-  });*/
+    res_txt: output_txt,
+    displayText: output_txt,
+    source: output_txt
+  });
 });
 
 restService.listen(process.env.PORT || 8000, function() {
