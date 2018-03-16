@@ -14,7 +14,9 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.get("/home", function(req, res) {
-  return "Welcome to hack-wars application home page";
+  return res.json({
+	res_txt: "Welcome to hack-wars application home page"
+  });
 });
 
 restService.post("/assist", function(req, res) {
