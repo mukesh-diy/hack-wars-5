@@ -23,7 +23,7 @@ restService.post("/assist", function(req, res) {
   var req_txt = req.body;
   return res.json({
     res_txt: req_txt,
-    displayText: res_txt,
+    displayText: req_txt,
     source: "Hello There!"
   });
 });
