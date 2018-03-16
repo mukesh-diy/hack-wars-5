@@ -23,7 +23,7 @@ restService.post("/assist", function(req, res) {
   var req_result = req.result;
   var req_action = req_result.action;
   if(req_action=='select.seat') {
-    if(req_result.preference=='Window') {
+    if(req_result.parameters.preference=='window') {
       res_txt = "Lucky you! Found a window seat. Seat No is A22W";
     }
   }
