@@ -1,0 +1,14 @@
+{
+  "name": "hack-wars-v",
+  "version": "1.0.0",
+  "description": "Hack Wars V Demo",
+  "main": "home.js",
+  "scripts": {
+    "start": "node home.js"
+  },
+  "author": "Mukesh Kumar",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4"
+  }
+}
